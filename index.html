@@ -3,24 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Field Logic Solutions | Innovation from the ground up</title>
+    <title>Field Logic Solutions | AgTech Engineering & Diesel Diagnostics NSW</title>
     <style>
-        body { background-color: #1a1a1a; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; }
-        .container { border-top: 5px solid #3498db; padding: 40px; background: #222; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 500px; }
-        h1 { font-size: 2rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-        p { color: #aaa; font-size: 1.1rem; }
-        .contact { margin-top: 30px; border-top: 1px solid #444; padding-top: 20px; font-size: 0.9rem; }
-        a { color: #3498db; text-decoration: none; }
+        :root {
+            --safety-blue: #3498db;
+            --charcoal: #2c3e50;
+            --steel: #f4f7f6;
+            --text: #333;
+        }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; line-height: 1.6; color: var(--text); background: var(--steel); margin: 0; }
+        
+        /* Industrial Header */
+        header { 
+            background: var(--charcoal); 
+            color: white; 
+            padding: 3rem 2rem; 
+            text-align: center; 
+            border-bottom: 5px solid var(--safety-blue);
+        }
+        header img {
+            max-height: 150px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+        }
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; text-transform: uppercase; }
+        header p { opacity: 0.8; font-weight: 300; font-size: 1.1rem; margin-top: 10px; }
+
+        .container { max-width: 1000px; margin: auto; padding: 2rem; }
+
+        /* Capabilities Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 2rem; }
+        .card { 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 4px; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--safety-blue);
+            transition: transform 0.2s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-top: 0; color: var(--charcoal); border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+        /* Technical Profile Section */
+        .profile { background: #eef2f3; padding: 2rem; border-radius: 8px; margin-top: 1rem; border: 1px solid #d1d9db; }
+        .profile h2 { margin-top: 0; color: var(--charcoal); }
+
+        .contact-footer { text-align: center; padding: 4rem 2rem; background: #fff; margin-top: 4rem; border-top: 1px solid #eee; }
+        .btn { 
+            background: var(--safety-blue); 
+            color: white; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-weight: bold;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Field Logic Solutions</h1>
-        <p>Innovation from the ground up.</p>
-        <p>Our digital workshop is currently under construction.</p>
-        <div class="contact">
-            Enquiries: <a href="mailto:info@fieldlogicsolutions.com.au">info@fieldlogicsolutions.com.au</a>
+
+<header>
+    <img src="images/logo.png" alt="Field Logic Solutions Logo">
+    <h1>Field Logic Solutions</h1>
+    <p>Mechatronics Engineering & Diesel Diagnostics</p>
+</header>
+
+<div class="container">
+    <section class="profile">
+        <h2>Regional Service | National Innovation</h2>
+        <p>Based in <strong>Gerringong</strong>, Field Logic Solutions operates as a dual-track engineering firm. We provide high-fidelity <strong>on-site diesel diagnostics</strong> across the South Coast, Southern Highlands, and Southern Tablelands, while our <strong>AgTech design house</strong> serves clients Australia-wide.</p>
+    </section>
+
+    <div class="grid">
+        <div class="card">
+            <div class="tag">Australia-Wide</div>
+            <h3>Engineering Design House</h3>
+            <p>Bespoke AgTech prototyping and mechatronics. From 3D-printed sensor housings to self-healing infrastructure, we design and ship innovation across Australia.</p>
+        </div>
+
+        <div class="card">
+            <div class="tag">Regional NSW</div>
+            <h3>On-Site Diesel Diagnostics</h3>
+            <p>Advanced troubleshooting with PicoScope and thermal imaging. We service the South Coast, Highlands, and Tablelands to solve complex field failures.</p>
+        </div>
+
+        <div class="card">
+            <h3>Custom AgTech Integration</h3>
+            <p>Specialising in LoRaWAN and livestock tracking systems (RFID/ML). We bridge the gap between rugged mechanical hardware and digital intelligence.</p>
         </div>
     </div>
+
+    <div class="contact-footer">
+        <h2>Ready to start your project?</h2>
+        <p>Currently accepting consultations for 2026.</p><br>
+        <a href="mailto:info@fieldlogicsolutions.com.au" class="btn">Enquire Now</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; font-size: 0.8rem; padding-bottom: 2rem;">
+        &copy; 2026 Field Logic Solutions | Gerringong, NSW | Australian-Owned & Operated
+    </p>
+</footer>
+
 </body>
 </html>
