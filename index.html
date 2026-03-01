@@ -138,13 +138,66 @@
         .card.active .read-more-btn { background: var(--tech-navy); color: white; }
 
         /* Founder Section */
-        .founder-section { background: white; padding: 3rem; margin-top: 3rem; border-radius: 4px; border: 1px solid #e2e8f0; }
-        .profile-flex { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
-        .founder-image img { width: 280px; height: 350px; object-fit: cover; border-radius: 4px; border: 4px solid var(--tech-navy); }
-        .founder-text { flex: 1; min-width: 300px; }
-        .tech-badges { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
-        .tech-badges span { background: #edf2f7; color: var(--slate-grey); padding: 5px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+        /* Mobile-Responsive Founder Section */
+.founder-section { 
+    background: white; 
+    padding: 2rem; 
+    margin-top: 3rem; 
+    border-radius: 4px; 
+    border: 1px solid #e2e8f0; 
+}
 
+.profile-flex { 
+    display: flex; 
+    flex-direction: column; /* Default to stack for mobile */
+    align-items: center; 
+    gap: 30px; 
+}
+
+.founder-image img { 
+    width: 100%; 
+    max-width: 320px; /* Limits size so it doesn't take over the screen */
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    border: 4px solid var(--tech-navy); 
+}
+
+.founder-text { 
+    text-align: center; /* Center text for mobile */
+}
+
+.tech-badges { 
+    margin-top: 20px; 
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.tech-badges span { 
+    background: #edf2f7; 
+    color: var(--slate-grey); 
+    padding: 5px 12px; 
+    border-radius: 20px; 
+    font-size: 0.7rem; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+}
+
+/* Desktop Adjustment */
+@media (min-width: 768px) {
+    .profile-flex { 
+        flex-direction: row; /* Side-by-side for desktop */
+        text-align: left; 
+    }
+    .founder-text { 
+        text-align: left; 
+    }
+    .tech-badges { 
+        justify-content: flex-start; 
+    }
+}
         .contact-footer { text-align: center; padding: 5rem 2rem; background: var(--tech-navy); color: white; margin-top: 4rem; }
         .contact-footer h2 { color: var(--accent-cyan); font-size: 2.2rem; margin-bottom: 10px; }
         .btn { 
