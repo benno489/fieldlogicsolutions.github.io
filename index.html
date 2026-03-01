@@ -13,9 +13,9 @@
     <meta name="google-site-verification" content="jKvaiz_pgk4AsLolyr9EPi0li7RaSp129R9ZFlSyxPU" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Field Logic Solutions | Engineering resilience into heavy industry and agriculture. Specialist mechatronics design, forensic diesel diagnostics, and AgTech prototyping.">
+    <meta name="description" content="Field Logic Solutions | Engineering resilience into heavy industry and agriculture. Specialist mechatronics design, forensic diagnostics, and AgTech prototyping.">
     <meta name="keywords" content="Field Logic Solutions, AgTech, Mechatronics Engineer, Diesel Diagnostics, Picoscope, Gerringong, Goulburn, Prototyping, FLS, J1939 CAN bus">
-    <title>Field Logic Solutions | Mechatronics Engineering & Forensic Diagnostics</title>
+    <title>Field Logic Solutions | Mechatronics Engineering & Systems Diagnostics</title>
     <style>
         :root {
             --tech-navy: #1a2a3a;
@@ -24,28 +24,68 @@
             --steel: #f8fafc;
             --text: #2d3748;
         }
+        
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+
         body { font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); background: var(--steel); margin: 0; }
         
+        /* Sticky Navigation */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: var(--tech-navy);
+            z-index: 1000;
+            padding: 12px 0;
+            border-bottom: 2px solid var(--accent-cyan);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .nav-logo { color: white; font-weight: 800; letter-spacing: 2px; font-size: 1.2rem; }
+        .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        .nav-links a { 
+            color: white; 
+            text-decoration: none; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            font-weight: 700; 
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent-cyan); }
+        .nav-cta { 
+            background: var(--accent-cyan); 
+            color: var(--tech-navy) !important; 
+            padding: 6px 14px; 
+            border-radius: 2px; 
+        }
+
         /* Engineering Header */
         header { 
             background: var(--tech-navy); 
             color: white; 
-            padding: 4rem 2rem; 
+            padding: 5rem 2rem; 
             text-align: center; 
-            border-bottom: 6px solid var(--accent-cyan);
         }
         header img {
             max-height: 120px;
             margin-bottom: 1.5rem;
             filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.3));
         }
-        header h1 { margin: 0; font-size: 2.4rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; }
+        header h1 { margin: 0; font-size: 2.6rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; }
         header p { opacity: 0.9; font-weight: 300; font-size: 1.2rem; margin-top: 10px; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1px; }
 
         .container { max-width: 1100px; margin: auto; padding: 2rem; }
 
         /* Profile Section */
-        .profile { background: white; padding: 2.5rem; border-radius: 4px; margin-top: -2rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .profile { background: white; padding: 2.5rem; border-radius: 4px; margin-top: -3rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
         .profile h2 { margin-top: 0; color: var(--tech-navy); font-size: 1.6rem; border-left: 4px solid var(--accent-cyan); padding-left: 15px; }
 
         /* Capabilities Grid & Cards */
@@ -53,21 +93,20 @@
         
         .card { 
             background: white; 
-            padding: 2rem; 
+            padding: 2.2rem; 
             border-radius: 4px; 
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             border-top: 4px solid var(--tech-navy);
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
-            overflow: hidden;
         }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top-color: var(--accent-cyan); }
         
         .card h3 { margin-top: 10px; color: var(--tech-navy); font-size: 1.4rem; margin-bottom: 15px; }
         .tag { font-size: 0.7rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; display: block; }
 
-        /* Expandable Content Logic */
+        /* Expandable Content */
         .expanded-content {
             max-height: 0;
             overflow: hidden;
@@ -76,7 +115,7 @@
             color: var(--slate-grey);
         }
         .card.active .expanded-content {
-            max-height: 400px;
+            max-height: 500px;
             margin-top: 20px;
             padding-top: 15px;
             border-top: 1px solid #edf2f7;
@@ -95,15 +134,19 @@
             font-weight: 700;
             text-transform: uppercase;
             transition: 0.3s;
-            display: inline-block;
         }
-        .card.active .read-more-btn {
-            background: var(--tech-navy);
-            color: white;
-        }
+        .card.active .read-more-btn { background: var(--tech-navy); color: white; }
+
+        /* Founder Section */
+        .founder-section { background: white; padding: 3rem; margin-top: 3rem; border-radius: 4px; border: 1px solid #e2e8f0; }
+        .profile-flex { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .founder-image img { width: 280px; height: 350px; object-fit: cover; border-radius: 4px; border: 4px solid var(--tech-navy); }
+        .founder-text { flex: 1; min-width: 300px; }
+        .tech-badges { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .tech-badges span { background: #edf2f7; color: var(--slate-grey); padding: 5px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
 
         .contact-footer { text-align: center; padding: 5rem 2rem; background: var(--tech-navy); color: white; margin-top: 4rem; }
-        .contact-footer h2 { color: var(--accent-cyan); font-size: 2rem; }
+        .contact-footer h2 { color: var(--accent-cyan); font-size: 2.2rem; margin-bottom: 10px; }
         .btn { 
             background: var(--accent-cyan); 
             color: var(--tech-navy); 
@@ -119,9 +162,27 @@
         .btn:hover { background: white; transform: scale(1.05); }
 
         footer { background: #f1f5f9; padding: 3rem 1rem; border-top: 1px solid #e2e8f0; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified for mobile */
+            .profile-flex { flex-direction: column; text-align: center; }
+            header h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
+
+<nav class="sticky-nav">
+    <div class="nav-container">
+        <div class="nav-logo">FIELD LOGIC</div>
+        <ul class="nav-links">
+            <li><a href="#design">Innovation</a></li>
+            <li><a href="#diagnostics">Diagnostics</a></li>
+            <li><a href="#founder">The Founder</a></li>
+            <li><a href="mailto:info@fieldlogicsolutions.com.au" class="nav-cta">Enquire Now</a></li>
+        </ul>
+    </div>
+</nav>
 
 <header>
     <img src="images/Logo.png" alt="Field Logic Solutions Logo">
@@ -131,20 +192,20 @@
 
 <div class="container">
     <section class="profile">
-    <h2>National Innovation | Systems Reliability</h2>
-    <p>
-        Field Logic Solutions operates a <strong>National AgTech Design House</strong> specialising in the R&D and rapid prototyping of bespoke mechatronic systems. From our <strong>Gerringong Tech Lab</strong>, we engineer self-healing infrastructure, IoT sensor arrays, and ruggedised hardware for clients Australia-wide.
-    </p>
-    <p>
-        This engineering foundation underpins our regional <strong>Systems Diagnostics & Forensic Analysis</strong> service. We provide the South Coast and Southern Highlands with data-driven technical resolution for complex diesel and hydraulic systems, moving beyond standard repairs to identify the root cause of systemic failure.
-    </p>
-</section>
+        <h2>National Innovation | Systems Reliability</h2>
+        <p>
+            Field Logic Solutions operates a <strong>National AgTech Design House</strong> specialising in the R&D and rapid prototyping of bespoke mechatronic systems. From our <strong>Gerringong Tech Lab</strong>, we engineer self-healing infrastructure, IoT sensor arrays, and ruggedised hardware for clients Australia-wide.
+        </p>
+        <p>
+            This engineering foundation underpins our regional <strong>Systems Diagnostics & Forensic Analysis</strong> service. We provide the South Coast and Southern Highlands with data-driven technical resolution for complex diesel and hydraulic systems, identifying root causes where standard tooling fails.
+        </p>
+    </section>
 
-    <div class="grid">
+    <div class="grid" id="design">
         <div class="card" onclick="toggleCard(this)">
             <span class="tag">Australia-Wide</span>
             <h3>Mechatronic Design House</h3>
-            <p>Bespoke R&D and rapid prototyping. We engineer hardware that thrives in the harshest environments, from custom sensor integration to self-healing infrastructure.</p>
+            <p>Bespoke R&D and rapid prototyping. We engineer hardware designed to thrive in the harshest environments, from custom sensor integration to self-healing infrastructure.</p>
             <div class="expanded-content">
                 <ul>
                     <li><strong>Prototyping:</strong> High-fidelity 3D printing and in-house machining for field-ready components.</li>
@@ -158,10 +219,10 @@
         <div class="card" onclick="toggleCard(this)">
             <span class="tag">Australia-Wide</span>
             <h3>Custom AgTech Integration</h3>
-            <p>Specialising in the bridge between legacy hardware and digital intelligence. We deploy robust tracking, LoRaWAN, and data-logging systems.</p>
+            <p>Bridging the gap between legacy hardware and digital intelligence. We deploy robust tracking, LoRaWAN, and data-logging systems.</p>
             <div class="expanded-content">
                 <ul>
-                    <li><strong>Connectivity:</strong> Expert LoRaWAN gateway deployment and sensor design.</li>
+                    <li><strong>Connectivity:</strong> Expert LoRaWAN gateway deployment and antenna design.</li>
                     <li><strong>Telemetry:</strong> Real-time livestock and asset tracking integration.</li>
                     <li><strong>Data Logic:</strong> Translating field sensor inputs into actionable reliability data.</li>
                 </ul>
@@ -169,27 +230,59 @@
             <button class="read-more-btn">Technical Capabilities +</button>
         </div>
 
-        <div class="card" onclick="toggleCard(this)">
-    <span class="tag">Regional NSW</span>
-    <h3>Systems Diagnostics & Forensic Analysis</h3>
-    <p>High-fidelity interrogation of complex heavy machinery. We identify the "invisible" root causes of systemic failure using advanced waveform telemetry.</p>
-    <div class="expanded-content">
-        <hr>
-        <ul>
-            <li><strong>Systems Diagnostics:</strong> Real-time validation of ECU, CAN bus, and sensor health to baseline machine performance.</li>
-            <li><strong>Forensic Failure Analysis:</strong> Specialist investigation into "untraceable" faults—identifying exactly <em>why</em> a component failed to prevent repeat downtime.</li>
-            <li><strong>Transient Data Capture:</strong> High-speed logging of hydraulic and electrical spikes that standard multimeters and gauges are too slow to detect.</li>
-            <li><strong>Engineering Reporting:</strong> Comprehensive technical briefs that translate complex data into actionable reliability strategies for your fleet.</li>
-        </ul>
-    </div>
-    <button class="read-more-btn">Technical Capabilities +</button>
-</div>
+        <div id="diagnostics" class="card" onclick="toggleCard(this)">
+            <span class="tag">Regional NSW</span>
+            <h3>Systems Diagnostics & Forensic Analysis</h3>
+            <p>High-fidelity interrogation of complex heavy machinery. We identify "invisible" root causes using advanced waveform telemetry.</p>
+            <div class="expanded-content">
+                <ul>
+                    <li><strong>Diagnostics:</strong> Real-time validation of ECU, CAN bus, and sensor health using 4-channel Picoscope analysis.</li>
+                    <li><strong>Forensic Analysis:</strong> Investigation into "untraceable" faults to prevent repeat downtime.</li>
+                    <li><strong>Transient Capture:</strong> High-speed logging of hydraulic and electrical spikes standard tools cannot detect.</li>
+                    <li><strong>Engineering Reports:</strong> Technical briefs translating data into permanent reliability strategies.</li>
+                </ul>
+            </div>
+            <button class="read-more-btn">Technical Capabilities +</button>
+        </div>
     </div>
 
+    <section class="founder-section" id="founder">
+    <div class="profile-flex">
+        <div class="founder-image">
+            <img src="images/ben-field.jpg" alt="Ben - Technical Lead at Field Logic Solutions">
+        </div>
+        <div class="founder-text">
+            <h2>Technical Leadership</h2>
+            <p><strong>Ben | B.Eng (Mechatronics)</strong></p>
+            <p>Field Logic Solutions was established to bridge the gap between heavy industrial assets and digital intelligence. As a <strong>fourth-generation farmer</strong>, Ben understands the environmental and operational stresses that destroy standard equipment.</p>
+            <p>His approach is defined by a rare "Dual-Trade" perspective. Having spent nearly two decade as a <strong>Diesel/Plant Mechanic and Fitter/Machinist</strong>, he possesses the manual machining and heavy mechanical grit required to execute in the field. This practical foundation is reinforced by a <strong>Degree in Mechatronics Engineering</strong> from UOW, allowing for the design of bespoke AgTech and forensic systems diagnostics that actually survive the paddock.</p>
+            <div class="tech-badges">
+                <span>Dual-Trade Specialist</span>
+                <span>UOW Engineering</span>
+                <span>Diesel & Machining Expert</span>
+                <span>4th Gen Farmer</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <div class="contact-footer">
-        <h2>Request a Technical Briefing</h2>
-        <p>Consultancy and engineering slots currently available for 2026.</p><br>
-        <a href="mailto:info@fieldlogicsolutions.com.au" class="btn">Enquire Now</a>
+    <h2>Technical Engagement</h2>
+    <p>Professional engineering oversight for 2026. Select a project stream to begin.</p>
+    
+    <div class="cta-grid">
+        <div class="cta-box">
+            <h3>R&D & Design</h3>
+            <p>Bespoke AgTech prototyping, mechatronic systems, and ruggedised hardware development.</p>
+            <a href="mailto:info@fieldlogicsolutions.com.au?subject=New Design Project Enquiry" class="btn">Start a Design Project</a>
+        </div>
+        
+        <div class="cta-box">
+            <h3>Systems Diagnostics</h3>
+            <p>Forensic failure analysis and root-cause investigation for heavy industrial assets.</p>
+            <a href="mailto:info@fieldlogicsolutions.com.au?subject=Systems Diagnostics Enquiry" class="btn">Request Diagnostics</a>
+        </div>
     </div>
 </div>
 
@@ -202,7 +295,6 @@
 
 <script>
 function toggleCard(card) {
-    // Only toggle if the click wasn't on the button itself (to avoid double toggle)
     card.classList.toggle('active');
     const btn = card.querySelector('.read-more-btn');
     if (card.classList.contains('active')) {
