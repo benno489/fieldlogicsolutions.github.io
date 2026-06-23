@@ -10,6 +10,7 @@
     }
     </script>
     <link rel="icon" href="Favicon.png" sizes="any">
+    <meta name="google-site-verification" content="jKvaiz_pgk4AsLolyr9EPi0li7RaSp129R9ZFlSyxPU" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Field Logic Solutions. Mechatronics engineering and mechanical reliability. I help fix field failures and design hardware that actually lasts.">
@@ -19,61 +20,74 @@
         --black: #000000;
         --dark-grey: #121212;
         --accent-cyan: #0099cc;
-        --off-white: #eeeeee;
+        --slate-grey: #a0aec0;
         --pure-white: #ffffff;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--off-white); background: var(--black); margin: 0; }
-    .nav-container { max-width: 900px; margin: auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-    header { padding: 4rem 20px; text-align: center; }
-    header h1 { font-size: 2.5rem; text-transform: uppercase; margin: 0; letter-spacing: 1px; }
-    header p { color: var(--accent-cyan); font-weight: 500; }
-    .container { max-width: 900px; margin: auto; padding: 20px; }
-    .card { background: var(--dark-grey); padding: 25px; margin-bottom: 25px; border-left: 4px solid var(--accent-cyan); }
-    .card h3 { margin-top: 0; color: var(--pure-white); }
-    .btn { background: var(--accent-cyan); color: var(--black); padding: 12px 24px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 15px; text-transform: uppercase; font-size: 0.9rem; }
-    footer { text-align: center; padding: 40px; color: #666; font-size: 0.8rem; }
+    body { font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #eeeeee; background: var(--black); margin: 0; }
+    
+    .sticky-nav { position: sticky; top: 0; background: var(--black); z-index: 1000; padding: 12px 0; border-bottom: 2px solid var(--accent-cyan); }
+    .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .nav-logo { color: var(--pure-white); font-weight: 800; letter-spacing: 2px; }
+    .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+    .nav-links a { color: var(--pure-white); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; }
+    
+    header { padding: 5rem 2rem; text-align: center; }
+    header img { max-height: 100px; margin-bottom: 1rem; }
+    header h1 { font-size: 2.5rem; text-transform: uppercase; margin: 0; color: var(--pure-white); }
+    header p { color: var(--accent-cyan); font-weight: 500; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; }
+
+    .container { max-width: 1100px; margin: auto; padding: 2rem; }
+    .profile { background: var(--dark-grey); padding: 2.5rem; border-radius: 4px; border: 1px solid #333; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 3rem; }
+    .card { background: var(--dark-grey); padding: 2.2rem; border-radius: 4px; border-top: 4px solid var(--accent-cyan); }
+    .card h3 { color: var(--pure-white); }
+    .btn { background: var(--accent-cyan); color: var(--black); padding: 10px 20px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 15px; text-transform: uppercase; font-size: 0.8rem; }
+    footer { text-align: center; padding: 3rem; color: #666; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-<nav><div class="nav-container"><strong>FIELD LOGIC SOLUTIONS</strong></div></nav>
+<nav class="sticky-nav">
+    <div class="nav-container">
+        <div class="nav-logo">FIELD LOGIC SOLUTIONS</div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+</nav>
 
 <header>
+    <img src="images/Logo(1).svg" alt="Field Logic Solutions Logo">
     <h1>Field Logic Solutions</h1>
     <p>Mechatronics Engineering & Mechanical Reliability</p>
 </header>
 
 <div class="container">
-    <section>
+    <section class="profile">
         <h2>Practical engineering, designed for purpose</h2>
-        <p>I’m a mechatronics engineer and fitter. My philosophy is simple: engineering should fit the environment, not the other way around. Over-engineering can be just as problematic as under-engineering.</p>
-        <p>I focus on designing hardware that is fit-for-purpose. If your project needs to withstand high-pressure washdowns or extreme vibration, I have the experience to hit standards like IP69K and MIL-STD-810H. But I also know when those standards are overkill, and when a simpler, more maintainable design is the smarter choice for your bottom line.</p>
+        <p>I’m a mechatronics engineer and fitter. My philosophy is simple: engineering should fit the environment, not the other way around. I focus on designing hardware that is fit-for-purpose—tough when it needs to be, but simple enough to maintain when things go wrong in the field.</p>
     </section>
 
-    <div id="services">
+    <div class="grid" id="services">
         <div class="card">
             <h3>Mechanical Design & Ruggedization</h3>
-            <p>I bridge the gap between a lab prototype and a tool that actually works on-site. I don't just draft parts; I design for the realities of the field—ensuring your gear is as rugged as it needs to be, but always easy to service when the time comes.</p>
+            <p>I bridge the gap between a lab prototype and a tool that actually works on-site. I design for durability against dust and water (up to IP69K standards) and manage vibration and shock loads verified to MIL-STD-810H. I build gear to survive, but I also design it so it’s actually serviceable when it needs maintenance.</p>
             <a href="mailto:info@fieldlogicsolutions.com.au" class="btn">Talk about a design</a>
         </div>
 
         <div class="card">
             <h3>Failure Analysis & Diagnostics</h3>
-            <p>If you've got an industrial asset that keeps breaking, I find out why. I combine trade-based diagnostic experience with engineering data to isolate the root cause, so you can stop patching problems and start fixing them.</p>
+            <p>If you have an industrial asset or prototype that isn't performing, I find out why. I combine trade-based diagnostic experience with engineering data to isolate the root cause, so you can stop patching problems and start fixing them for good.</p>
             <a href="mailto:info@fieldlogicsolutions.com.au" class="btn">Get a diagnostic check</a>
         </div>
     </div>
 
-    <section>
+    <section id="about" style="margin-top:40px;">
         <h2>About my background</h2>
         <p>I’m Ben. My background is a mix of engineering theory and trade-floor experience. Over the last two decades, I’ve worked on everything from wind turbines and underground mining gear to CNC machining and autonomous AgTech.</p>
-        <p>Growing up on the land and working in heavy industry taught me that there is no substitute for real-world experience. I bring that perspective to every project I take on.</p>
-    </section>
-
-    <section style="margin-top:40px;">
-        <h2>Capacity for 2026</h2>
-        <p>I’m currently managing a few core projects, but I have the capacity to take on two new technical consultancies. If you need someone who understands both the math and the workshop floor on your team, let’s talk.</p>
+        <p>Growing up on the land and working in heavy industry taught me that there is no substitute for real-world experience. I bring that perspective to every project I take on. I’m currently managing a few core projects, but I have the capacity to take on two new technical consultancies. If you need someone who understands both the math and the workshop floor on your team, let’s talk.</p>
     </section>
 </div>
 
