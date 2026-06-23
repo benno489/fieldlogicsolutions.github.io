@@ -4,122 +4,42 @@
     <link rel="icon" href="Favicon.png" sizes="any">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Field Logic Solutions | Project Portfolio. Engineering case studies of ruggedised mechatronics, advanced prototypes, and forensic systems analysis.">
-    <title>Engineering Projects & R&D Log | Field Logic Solutions</title>
+    <meta name="description" content="Field Logic Solutions | Project Portfolio. Engineering case studies of ruggedised mechatronics and forensic systems diagnostics.">
+    <title>Engineering Projects | Field Logic Solutions</title>
     <style>
     :root {
         --black: #000000;
         --dark-grey: #121212; 
         --accent-cyan: #0099cc;
-        --slate-grey: #a0aec0; 
         --off-white: #eeeeee;
         --pure-white: #ffffff;
     }
-    
     html { scroll-behavior: smooth; }
-
-    body { 
-        font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
-        line-height: 1.6; 
-        color: var(--off-white); 
-        background: var(--black); 
-        margin: 0; 
-    }
+    body { font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--off-white); background: var(--black); margin: 0; }
     
-    .sticky-nav {
-        position: sticky;
-        top: 0;
-        background: var(--black);
-        z-index: 1000;
-        padding: 12px 0;
-        border-bottom: 2px solid var(--accent-cyan);
-        box-shadow: 0 4px 20px rgba(0,153,204,0.1);
-    }
-    .nav-container {
-        max-width: 1100px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-    }
-    .nav-logo { color: var(--pure-white); font-weight: 800; letter-spacing: 2px; font-size: 1.2rem; text-decoration: none; }
+    .sticky-nav { position: sticky; top: 0; background: var(--black); z-index: 1000; padding: 12px 0; border-bottom: 2px solid var(--accent-cyan); }
+    .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .nav-logo { color: var(--pure-white); font-weight: 800; letter-spacing: 2px; font-size: 1.1rem; text-decoration: none; }
     .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-    .nav-links a { 
-        color: var(--pure-white); 
-        text-decoration: none; 
-        font-size: 0.8rem; 
-        text-transform: uppercase; 
-        font-weight: 700; 
-        letter-spacing: 1px;
-        transition: 0.3s;
-    }
-    .nav-links a:hover { color: var(--accent-cyan); }
-    .nav-cta { 
-        background: var(--accent-cyan); 
-        color: var(--black) !important; 
-        padding: 6px 14px; 
-        border-radius: 2px; 
-    }
-
+    .nav-links a { color: var(--pure-white); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; }
+    
     .container { max-width: 1100px; margin: auto; padding: 4rem 2rem; }
-
-    /* Portfolio Specific Layout Styles */
     .portfolio-header { text-align: center; margin-bottom: 4rem; }
-    .portfolio-header h1 { font-size: 2.4rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; color: var(--pure-white); margin-bottom: 10px; }
-    .portfolio-header p { font-size: 1.1rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1px; }
+    .portfolio-header h1 { font-size: 2.4rem; text-transform: uppercase; font-weight: 800; margin-bottom: 10px; }
+    .portfolio-header p { color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1px; }
 
-    .case-study-row { 
-        display: flex; 
-        flex-direction: column;
-        gap: 40px; 
-        background: var(--dark-grey);
-        padding: 2.5rem;
-        border-radius: 4px;
-        border: 1px solid #222;
-        margin-bottom: 4rem;
-        border-left: 4px solid var(--accent-cyan);
-    }
+    .case-study-row { display: flex; flex-direction: column; gap: 40px; background: var(--dark-grey); padding: 2.5rem; border-radius: 4px; margin-bottom: 4rem; border-left: 4px solid var(--accent-cyan); }
+    .project-media { flex: 1; }
+    .placeholder-box { border: 2px dashed #333; background: #0a0a0a; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 4px; }
     
-    .project-media {
-        flex: 1;
-        width: 100%;
-    }
-    
-    /* Styled Placeholder for Technical Drawings/CAD Screenshots until uploaded */
-    .placeholder-box {
-        border: 2px dashed #333;
-        background: #0a0a0a;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-        transition: border-color 0.3s;
-    }
-    .case-study-row:hover .placeholder-box { border-color: var(--accent-cyan); }
-    .placeholder-box span { color: var(--accent-cyan); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; }
-    .placeholder-box p { color: var(--slate-grey); font-size: 0.8rem; margin-top: 8px; }
-
     .project-details { flex: 1; }
-    .project-meta { font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; display: block; }
-    .project-details h2 { color: var(--pure-white); font-size: 1.8rem; margin: 5px 0 20px 0; text-transform: uppercase; }
+    .project-meta { font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .project-details h2 { color: var(--pure-white); font-size: 1.8rem; margin: 0 0 20px 0; }
+    .tech-subheading { color: var(--pure-white); font-size: 0.95rem; text-transform: uppercase; font-weight: 700; margin-top: 15px; }
     
-    .tech-subheading { color: var(--pure-white); font-size: 0.95rem; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.5px; font-weight: 700; }
-    .project-details p { color: var(--off-white); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
-    .project-details p:last-child { margin-bottom: 0; }
-
-    @media (min-width: 768px) {
-        .case-study-row { flex-direction: row; align-items: center; }
-        .case-study-row.reverse { flex-direction: row-reverse; }
-    }
-    
-    @media (max-width: 768px) {
-        .nav-links { display: none; }
-        .portfolio-header h1 { font-size: 1.8rem; }
-    }
-</style>
+    @media (min-width: 768px) { .case-study-row { flex-direction: row; align-items: center; } .case-study-row.reverse { flex-direction: row-reverse; } }
+    footer { text-align: center; padding: 3rem; color: #666; font-size: 0.8rem; }
+    </style>
 </head>
 <body>
 
@@ -127,11 +47,9 @@
     <div class="nav-container">
         <a href="index.html" class="nav-logo">FIELD LOGIC SOLUTIONS</a>
         <ul class="nav-links">
-            <li><a href="index.html#design">Innovation</a></li>
-            <li><a href="index.html#diagnostics">Diagnostics</a></li>
-            <li><a href="projects.html">Our Projects</a></li>
-            <li><a href="index.html#founder">The Founder</a></li>
-            <li><a href="mailto:info@fieldlogicsolutions.com.au" class="nav-cta">Enquire Now</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
         </ul>
     </div>
 </nav>
@@ -139,65 +57,45 @@
 <div class="container">
     <header class="portfolio-header">
         <h1>Engineering Case Studies</h1>
-        <p>Anonymised R&D Log & Practical Systems Resolution</p>
+        <p>Applied reliability & field-tested design</p>
     </header>
 
     <div class="case-study-row">
         <div class="project-media">
-            <div class="placeholder-box">
-                <span>[ CAD MODEL ASSEMBLY // REF: 01 ]</span>
-                <p>Industrial ASA Additive Enclosure Profile</p>
-            </div>
+            <div class="placeholder-box"><span>[ DESIGN DATA // REF: 01 ]</span></div>
         </div>
         <div class="project-details">
-            <span class="project-meta">Mechatronic Design Stream</span>
+            <span class="project-meta">Mechanical Design & Ruggedization</span>
             <h2>Harsh-Environment Telemetry Enclosure</h2>
-            
             <div class="tech-subheading">The Challenge</div>
-            <p>Mitigating catastrophic field failure patterns caused by transient harmonic vibration, moisture ingress, and thermal shifting on custom sensor arrays deployed across extreme agricultural environments.</p>
-            
-            <div class="tech-subheading">The Execution</div>
-            <p>Architected a custom, high-durability housing leveraging advanced, high-temperature industrial ASA printing frameworks. Designed tight-tolerance internal structural walls combined with custom-machined mechanical interfaces to mechanically isolate microcontrollers from physical chassis shocks.</p>
-            
-            <div class="tech-subheading">The Outcome</div>
-            <p>Delivered completely sealed, field-ready hardware blocks achieving zero system structural failures across intense mechanical implementation evaluations, locking in data logging integrity.</p>
+            <p>We were tasked with resolving consistent hardware failures in a fleet of agricultural communication equipment. The units were failing due to a combination of vibration, moisture ingress, and thermal cycling in extreme outdoor conditions.</p>
+            <div class="tech-subheading">Our Approach</div>
+            <p>We re-engineered the housing using high-temperature industrial materials. We redesigned the internal structural architecture to mechanically isolate the sensitive microcontrollers from chassis vibration, ensuring the electronics remained stable regardless of external physical loads.</p>
+            <div class="tech-subheading">The Result</div>
+            <p>The revised design achieved complete environmental sealing and structural stability. The client reported zero mechanical-related system failures throughout the subsequent field evaluation period.</p>
         </div>
     </div>
 
     <div class="case-study-row reverse">
         <div class="project-media">
-            <div class="placeholder-box">
-                <span>[ WAVEFORM GRAPHIC // REF: 02 ]</span>
-                <p>High-Speed Telemetry Waveform Analysis</p>
-            </div>
+            <div class="placeholder-box"><span>[ DIAGNOSTIC DATA // REF: 02 ]</span></div>
         </div>
         <div class="project-details">
             <span class="project-meta">Forensic Diagnostics Stream</span>
-            <h2>Transient Hydraulic & CAN Bus Fault Isolation</h2>
-            
+            <h2>Transient Fault Isolation</h2>
             <div class="tech-subheading">The Challenge</div>
-            <p>Isolating high-frequency, intermittent component shut-downs on high-pressure fluid power machinery loops where standard hand-held service diagnostic tools failed to log any fault markers.</p>
-            
-            <div class="tech-subheading">The Execution</div>
-            <p>Utilised multi-channel automotive oscilloscopes (Picoscope telemetry) coupled with high-speed digital logging architecture directly inline with the physical CAN network. Captured data spikes inside micro-second frames to trap hidden system-wide drops.</p>
-            
-            <div class="tech-subheading">The Outcome</div>
-            <p>Pinpointed a transient micro-solenoid earthing fault occurring only under full operational heat loads, generating an engineering roadmap to eliminate recurring system downtime.</p>
+            <p>A client was experiencing intermittent, high-frequency machine shutdowns on a high-pressure hydraulic loop. Standard service tools failed to capture the error, leaving the cause of the downtime unknown.</p>
+            <div class="tech-subheading">Our Approach</div>
+            <p>We deployed multi-channel oscilloscope telemetry directly into the machine's network. By monitoring the system under full operational heat loads, we identified a transient micro-solenoid earthing fault that only manifested during specific duty cycles.</p>
+            <div class="tech-subheading">The Result</div>
+            <p>With the root cause identified, we implemented a permanent hardware correction. This eliminated the recurring downtime and provided the client with a clear roadmap for long-term asset reliability.</p>
         </div>
     </div>
 </div>
 
 <footer>
-    <p style="text-align: center; color: #64748b; font-size: 0.85rem;">
-        &copy; 2026 Field Logic Solutions | Gerringong, NSW | ABN 39 694 832 570 <br>
-        Advanced Mechatronics & Systems Engineering Australia
-    </p>
+    &copy; 2026 Field Logic Solutions | Gerringong, NSW
 </footer>
 
 </body>
 </html>
-
-
-
-
-
