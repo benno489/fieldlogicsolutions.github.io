@@ -30,6 +30,123 @@
 
     .case-study-row { display: flex; flex-direction: column; gap: 40px; background: var(--dark-grey); padding: 2.5rem; border-radius: 4px; margin-bottom: 4rem; border-left: 4px solid var(--accent-cyan); }
     .project-media { flex: 1; }
+    .project-media img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: block; }
+    .placeholder-box { border: 2px dashed #333; background: #0a0a0a; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 4px; }
+    
+    .project-details { flex: 1; }
+    .project-meta { font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .project-details h2 { color: var(--pure-white); font-size: 1.8rem; margin: 0 0 20px 0; }
+    .tech-subheading { color: var(--pure-white); font-size: 0.95rem; text-transform: uppercase; font-weight: 700; margin-top: 15px; }
+    
+    @media (min-width: 768px) { .case-study-row { flex-direction: row; align-items: center; } .case-study-row.reverse { flex-direction: row-reverse; } }
+    footer { text-align: center; padding: 3rem; color: #666; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">FIELD LOGIC SOLUTIONS</a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <header class="portfolio-header">
+        <h1>Engineering Case Studies</h1>
+        <p>Applied reliability & field-tested design</p>
+    </header>
+
+    <div class="case-study-row">
+        <div class="project-media">
+            <div class="placeholder-box"><span>[ DESIGN DATA // REF: 01 ]</span></div>
+        </div>
+        <div class="project-details">
+            <span class="project-meta">Mechanical Design & Ruggedization</span>
+            <h2>Harsh-Environment Telemetry Enclosure</h2>
+            <div class="tech-subheading">The Challenge</div>
+            <p>We were tasked with resolving consistent hardware failures in a fleet of agricultural communication equipment. The units were failing due to a combination of vibration, moisture ingress, and thermal cycling in extreme outdoor conditions.</p>
+            <div class="tech-subheading">Our Approach</div>
+            <p>We re-engineered the housing using high-temperature industrial materials. We redesigned the internal structural architecture to mechanically isolate the sensitive microcontrollers from chassis vibration, ensuring the electronics remained stable regardless of external physical loads.</p>
+            <div class="tech-subheading">The Result</div>
+            <p>The revised design achieved complete environmental sealing and structural stability. The client reported zero mechanical-related system failures throughout the subsequent field evaluation period.</p>
+        </div>
+    </div>
+
+    <div class="case-study-row reverse">
+        <div class="project-media">
+            <div class="placeholder-box"><span>[ DIAGNOSTIC DATA // REF: 02 ]</span></div>
+        </div>
+        <div class="project-details">
+            <span class="project-meta">Forensic Diagnostics Stream</span>
+            <h2>Transient Fault Isolation</h2>
+            <div class="tech-subheading">The Challenge</div>
+            <p>A client was experiencing intermittent, high-frequency machine shutdowns on a high-pressure hydraulic loop. Standard service tools failed to capture the error, leaving the cause of the downtime unknown.</p>
+            <div class="tech-subheading">Our Approach</div>
+            <p>We deployed multi-channel oscilloscope telemetry directly into the machine's network. By monitoring the system under full operational heat loads, we identified a transient micro-solenoid earthing fault that only manifested during specific duty cycles.</p>
+            <div class="tech-subheading">The Result</div>
+            <p>With the root cause identified, we implemented a permanent hardware correction. This eliminated the recurring downtime and provided the client with a clear roadmap for long-term asset reliability.</p>
+        </div>
+    </div>
+
+    <div class="case-study-row">
+        <div class="project-media">
+            <img src="images/milIslandTower2.jpg" alt="Remote NT Island Emergency Communication Towers Deployment">
+        </div>
+        <div class="project-details">
+            <span class="project-meta">Remote Deployment & Infrastructure</span>
+            <h2>Remote NT Island Emergency Communication Towers</h2>
+            <div class="tech-subheading">The Challenge</div>
+            <p>We were engaged to deliver the complete site construction, modular foundation installation, and electrical commissioning of two communications towers on a remote NT island. The project required executing a complex deployment miles away from mainland infrastructure while strictly managing maritime transport and on-site assembly timelines.</p>
+            <div class="tech-subheading">Our Approach</div>
+            <p>We coordinated end-to-end maritime barge logistics to transport heavy structural steel safely to the island site. To bypass the lack of local batching facilities, we utilized pre-engineered modular concrete foundations fabricated in Darwin for rapid, secure anchoring. Following structural erection, we completed full electrical commissioning, integrated robust DC-DC power regulation, and mapped precise GPS coordinates alongside comprehensive field testing to establish an effective emergency communication radius around each tower for the local community.</p>
+            <div class="tech-subheading">The Result</div>
+            <p>Both towers achieved seamless structural and electrical sign-off with successful client handover. The deployment delivered a highly reliable, long-range wireless network capable of maintaining stable performance under harsh environmental conditions.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Field Logic Solutions | Gerringong, NSW
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="Favicon.png" sizes="any">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Field Logic Solutions | Project Portfolio. Engineering case studies of ruggedised mechatronics and forensic systems diagnostics.">
+    <title>Engineering Projects | Field Logic Solutions</title>
+    <style>
+    :root {
+        --black: #000000;
+        --dark-grey: #121212; 
+        --accent-cyan: #0099cc;
+        --off-white: #eeeeee;
+        --pure-white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--off-white); background: var(--black); margin: 0; }
+    
+    .sticky-nav { position: sticky; top: 0; background: var(--black); z-index: 1000; padding: 12px 0; border-bottom: 2px solid var(--accent-cyan); }
+    .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .nav-logo { color: var(--pure-white); font-weight: 800; letter-spacing: 2px; font-size: 1.1rem; text-decoration: none; }
+    .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+    .nav-links a { color: var(--pure-white); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; }
+    
+    .container { max-width: 1100px; margin: auto; padding: 4rem 2rem; }
+    .portfolio-header { text-align: center; margin-bottom: 4rem; }
+    .portfolio-header h1 { font-size: 2.4rem; text-transform: uppercase; font-weight: 800; margin-bottom: 10px; }
+    .portfolio-header p { color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1px; }
+
+    .case-study-row { display: flex; flex-direction: column; gap: 40px; background: var(--dark-grey); padding: 2.5rem; border-radius: 4px; margin-bottom: 4rem; border-left: 4px solid var(--accent-cyan); }
+    .project-media { flex: 1; }
     .placeholder-box { border: 2px dashed #333; background: #0a0a0a; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 4px; }
     
     .project-details { flex: 1; }
